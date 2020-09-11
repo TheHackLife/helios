@@ -17,7 +17,7 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
 **HELIOS** Posee una API desde la cual podrá controlar sus luces desde la plataforma que usted desee
  
 ### Endpoints 
-GET http://cloud.helios.bar/set
+GET http://cloud.helios.bar:9000/set
 
 #### Variables
 **ip**: ip de lampara ó "all" *(Obligatoria)*  
