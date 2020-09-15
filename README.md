@@ -17,12 +17,33 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
 **HELIOS** Posee una API desde la cual podrá controlar sus luces desde la plataforma que usted desee
 
 #### GET Endpoint
-**GET http://cloud.helios.bar:9000/get**
+**GET http://cloud.helios.bar:9000/get**  
 **uid**: id de tu hub" *(Obligatoria)*  
-**json** si incluye esta variable, obtendra sus luces en formato json
+**json** si incluye esta variable, obtendra sus luces en formato json  
+
+## Respuesta
+```javaScript
+{
+   "bulbs": [
+      [
+          "6807145", //chip id del tubo
+          "070109",  //color base (modo 0)
+          "000000",  //color g1 (modo 1)
+          "68157f",  //color g2 (modo 1)
+          "1",       //Tamaño arcoiris
+          "29",      //Velocidad Arcoiris
+          "colorf", //modo Audio ritmico
+          "5",      //velocidad flash
+          "100"     //ip de luz (este valor debe ser usado para enviar comandos a esta luz)
+       ],
+       [etc...]
+   ]
+}
+
+```
 
 #### SET Endpoint
-**GET http://cloud.helios.bar:9000/set**
+**GET http://cloud.helios.bar:9000/set**  
 
 **ip**: ip de lampara ó "all" *(Obligatoria)*  
 **uid**: id de tu hub" *(Obligatoria)*  
@@ -101,7 +122,7 @@ change("all", 0, function(){
 ## License
 
 Hecho por [TheHackLife](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)  
-Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo o hacer una [donación](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)
+Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo o hacer una [donación](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)  
 MIT License
 
 2020
