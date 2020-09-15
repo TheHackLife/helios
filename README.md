@@ -15,11 +15,15 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
  
 ## API
 **HELIOS** Posee una API desde la cual podrá controlar sus luces desde la plataforma que usted desee
- 
-### Endpoints 
-GET http://cloud.helios.bar:9000/set
 
-#### Variables
+#### GET Endpoint
+**GET http://cloud.helios.bar:9000/get**
+**uid**: id de tu hub" *(Obligatoria)*  
+**json** si incluye esta variable, obtendra sus luces en formato json
+
+#### SET Endpoint
+**GET http://cloud.helios.bar:9000/set**
+
 **ip**: ip de lampara ó "all" *(Obligatoria)*  
 **uid**: id de tu hub" *(Obligatoria)*  
 **change**: 0-6 para cambiar entre modos preestablecidos  
@@ -33,6 +37,9 @@ GET http://cloud.helios.bar:9000/set
 
 ## Ejemplos
 ```javaScript
+//Obtenemos un json con todas nuestras luces disponibles
+$.get("http://cloud.helios.bar/get?uid=QCGH4456511&json=1");
+
 //Cambiamos la lampara a modo 0 (Color solido)
 $.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&change=0");
 
