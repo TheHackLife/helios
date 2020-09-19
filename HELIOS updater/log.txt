@@ -1,0 +1,23 @@
+Starting HELIOS updater by TheHackLife
+dir is 
+esptool.py v2.6
+Found 2 serial ports
+Serial port COM3
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+MAC: 48:3f:da:73:fe:8d
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 921600
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Compressed 324752 bytes to 237555...
+Writing at 0x00000000... (6 %)Writing at 0x00004000... (13 %)Writing at 0x00008000... (20 %)Writing at 0x0000c000... (26 %)Writing at 0x00010000... (33 %)Writing at 0x00014000... (40 %)Writing at 0x00018000... (46 %)Writing at 0x0001c000... (53 %)Writing at 0x00020000... (60 %)Writing at 0x00024000... (66 %)Writing at 0x00028000... (73 %)Writing at 0x0002c000... (80 %)Writing at 0x00030000... (86 %)Writing at 0x00034000... (93 %)Writing at 0x00038000... (100 %)Wrote 324752 bytes (237555 compressed) at 0x00000000 in 3.6 seconds (effective 727.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Staying in bootloader.
