@@ -17,8 +17,8 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
 **HELIOS** Posee una API desde la cual podrá controlar sus luces desde la plataforma que usted desee
 
 #### GET Endpoint
-**GET http://cloud.helios.bar:9000/get**  
-**uid**: id de tu hub" *(Obligatoria)*  
+**GET https://api.helios.bar/get**  
+**uid**: id de tu hub *(Obligatoria)*  
 **json** si incluye esta variable, obtendra sus luces en formato json  
 
 ## Respuesta
@@ -32,7 +32,7 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
           "68157f",  //color g2 (modo 1)
           "1",       //Tamaño arcoiris
           "29",      //Velocidad Arcoiris
-          "colorf", //modo Audio ritmico
+          "color", //modo Audio ritmico
           "5",      //velocidad flash
           "100"     //ip de luz (este valor debe ser usado para enviar comandos a esta luz)
        ],
@@ -43,7 +43,7 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
 ```
 
 #### SET Endpoint
-**GET http://cloud.helios.bar:9000/set**  
+**GET https://api.helios.bar/set**  
 
 **ip**: ip de lampara ó "all" *(Obligatoria)*  
 **uid**: id de tu hub" *(Obligatoria)*  
@@ -59,20 +59,20 @@ Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** 
 ## Ejemplos
 ```javaScript
 //Obtenemos un json con todas nuestras luces disponibles
-$.get("http://cloud.helios.bar/get?uid=QCGH4456511&json=1");
+$.get("https://api.helios.bar/get?uid=QCGH4456511&json=1");
 
 //Cambiamos la lampara a modo 0 (Color solido)
-$.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&change=0");
+$.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&change=0");
 
 //Cambiamos el color a rojo
-$.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&base=#7f0000");
+$.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&base=#7f0000");
 
 //Cambiamos la lampara a modo 1 (Degradado)
-$.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&change=1");
+$.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&change=1");
 
 //Hacemos un degradado entre Rojo y Celeste
-$.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&g1=#7f0000");
-$.get("http://cloud.helios.bar/set?id=100&uid=QCGH4456511&g2=#007b7f");
+$.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&g1=#7f0000");
+$.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&g2=#007b7f");
 
 ```
 
