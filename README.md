@@ -9,7 +9,8 @@ Abrir el programa **HELIOS Updater.exe**
 Conectar cualquier placa basada en esp8266 (wemos, nodemcu, etc...)  
 Seleccionar el firmware correspondiente *("Controlador.bin" para el hub, "led.bin" para el tubo)*  
 El programa subira el firmware automaticamente, ante cualquier problema revisar el archivo *log.txt*  
-Controlar las luces a travez del hub conectando se a la red wifi **HELIOS BAR** ó a traves del sitio web *https://helios.bar*  
+Conectarse a la red wifi **HELIOS BAR** usando la contraseña "TheHackLife" y esperar que automaticamente se abra un sitio web *(Puede demorar un poco, en caso de que no se abra dirigirse al sitio 192.168.4.1 desde el navegador)*  
+Configurar si se desea una red wifi, ahora ya podrá controlar sus luces, si eligió que el Hub se conecte a internet, podrá usar su HUBID *(que aparecerá debajo del logo de HELIOS)* para manejar sus luces a través del sitio web *https://helios.bar*  
 
 **Nota:** Para controlar sus tubos leds a traves del sitio web *https://helios.bar* deberá antes conectarse a la red **HELIOS BAR** y una vez configurada su red wifi, obtendrá su HubID *(Nunca revele su HubID, de otra forma cualquiera podría manejar sus lamparas)*, si lo necesita, el HubID puede cambiarse.
  
@@ -118,6 +119,11 @@ change("all", 0, function(){
   }
 });
 ```
+
+## Posibles errores
+**Me conecté a la red wifi, pero no se abre la web:** La web de helios se abre automaticamente al conectarse a la red wifi en un modo de "Captive portal", en ocasiones la misma no se abre o la red dice "Red sin internet", en este caso desconecte su wifi, espere unos segundos, vuelva a conectarse, también puede probar abrir el sitio web 192.168.4.1 desde cualquier navegador una vez conectado a la red wifi  
+**Necesito reiniciar mi HUBID o volver a configurar mi wifi:** Una vez dentro de la web, apagar las luces eligiendo el modo "Apagado" y luego clickear el boton de reinicio de fábrica
+**Puse mal los datos de mi wifi, y ahora no anda:** Todavía no tenemos una solucion presisa sobre este problema, pero puede solucionarlo volviendo a instalar el firmware en su hub
 
 ## License
 
