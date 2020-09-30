@@ -12,8 +12,17 @@ El programa subira el firmware automaticamente, ante cualquier problema revisar 
 Conectarse a la red wifi **HELIOS BAR** usando la contraseña "TheHackLife" y esperar que automaticamente se abra un sitio web *(Puede demorar un poco, en caso de que no se abra dirigirse al sitio 192.168.4.1 desde el navegador)*  
 Configurar si se desea una red wifi, ahora ya podrá controlar sus luces, si eligió que el Hub se conecte a internet, podrá usar su HUBID *(que aparecerá debajo del logo de HELIOS)* para manejar sus luces a través del sitio web *https://helios.bar*  
 
-**Nota:** Para controlar sus tubos leds a traves del sitio web *https://helios.bar* deberá antes conectarse a la red **HELIOS BAR** y una vez configurada su red wifi, obtendrá su HubID *(Nunca revele su HubID, de otra forma cualquiera podría manejar sus lamparas)*, si lo necesita, el HubID puede cambiarse.
- 
+**Nota:** Para controlar sus tubos leds a traves del sitio web *https://helios.bar* deberá antes conectarse a la red **HELIOS BAR** y una vez configurada su red wifi, obtendrá su HubID *(Nunca revele su HubID, de otra forma cualquiera podría manejar sus lamparas)*, si lo necesita, el HubID puede cambiarse.  
+
+## Modos
+**Base:** Ilumina el tubo en un color sólido  
+**Degradado:** Crea un degradado en el tubo entre dos colores  
+**Rítmico:** Hace uso del microfono integrado del Hub para crear patrones audioritmicos del tubo *(posee más modos internos)*  
+**Arcoíris:** Crea un arcoíris de colores *(posee más modos internos)*  
+**Strobe:** Crea un efecto strobe en el tubo aleatoriamente  
+**Chill:** Ilumina el tubo de un color solido y crea una onda con otro color que elijamos *(posee configuraciones internas)*  
+**Apagado:** Apaga el tubo
+
 ## API
 **HELIOS** Posee una API desde la cual podrá controlar sus luces desde la plataforma que usted desee
 
@@ -33,9 +42,11 @@ Configurar si se desea una red wifi, ahora ya podrá controlar sus luces, si eli
           "68157f",  //color g2 (modo 1)
           "1",       //Tamaño arcoiris
           "29",      //Velocidad Arcoiris
-          "color", //modo Audio ritmico
-          "5",      //velocidad flash
-          "100"     //ip de luz (este valor debe ser usado para enviar comandos a esta luz)
+          "color",   //modo Audio ritmico
+          "5",       //velocidad flash
+          "100",     //ip de luz (este valor debe ser usado para enviar comandos a esta luz)
+          "7",       //Velocidad de chill
+          "63"       //tamaño del chill
        ],
        [etc...]
    ]
@@ -56,6 +67,9 @@ Configurar si se desea una red wifi, ahora ya podrá controlar sus luces, si eli
 **flashSpeed**: 5-40 *(Para modo "Audio Ritmico" o 2)*  
 **rainbowSize**: 5-40 *(Para modo "Aroiris" o 3)*  
 **rainbowSpeed**: 5-200 *(Para modo "Aroiris" o 3)*  
+**chillSpeed**: 5-100 *(Para modo "Chill" o 5)*  
+**chillSize**: 5-200 *(Para modo "Chill" o 5)*  
+**turnPixel**: Pixel (0-71)/ Color en HEX  
 
 ## Ejemplos
 ```javaScript
@@ -80,7 +94,8 @@ $.get("https://api.helios.bar/set?id=100&uid=QCGH4456511&g2=#007b7f");
 ## Apps dentro del sitio
 Crear apps dentro del sitio web *https://helios.bar* puede resultar atractivo si no se tiene un entorno donde poder correr la API tradicional
 
-El lenguaje es javaScript y puede hacerlo  mediante los endpoints de la API pública, aunque hemos pre-programado ciertas funciones que pueden ayudarle
+El lenguaje es javaScript y puede hacerlo mediante los endpoints de la API pública, aunque hemos pre-programado ciertas funciones que pueden ayudarle  
+Además tendrá el framework jQuery pre instalado para que sea aun más sencillo 
 
 ### Funciones pre-programadas
 #### rainbow _(string HEX1, string HEX1, int STEPS)_
@@ -103,6 +118,15 @@ Cambia el tamaño de los colores del Arcoiris *(Solo funciona con modo "Arcoiris
 
 #### speedi _(String IP, int Size, function Callback)_
 Cambia el tamaño de los colores del Arcoiris *(Solo funciona con modo "Arcoiris" o 3)*
+
+#### chillSpeed _(String IP, int Speed, function Callback)_
+Cambia la velocidad del modo Chill *(Solo funciona con modo "Chill" o 5)*
+
+#### chillSize _(String IP, int Size, function Callback)_
+Cambia la el tamaño del modo Chill *(Solo funciona con modo "Chill" o 5)*
+
+#### turnPixel _(String IP, String pixel/HEX, function Callback)_
+Prende un solo pixel del color que indiquemos, se envia un string donde primero va el numero del pixel a cambiar, y luego el color por el que será cambiado, separados por una barra  
 
 ## Ejemplos
 ```javaScript
