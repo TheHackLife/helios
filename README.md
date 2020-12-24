@@ -157,8 +157,7 @@ Controlador
 
 ## Licencia
 
-Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo. 
-
+Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo.  
 MIT License
 
 2020
