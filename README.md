@@ -1,4 +1,4 @@
-![Test Image 1](https://i.imgur.com/AUZMd9M.png)
+![Helios](https://i.imgur.com/AUZMd9M.png)
 
 Helios RGB Bar por [TheHackLife](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)
 
@@ -149,10 +149,16 @@ change("all", 0, function(){
 **Necesito reiniciar mi HUBID o volver a configurar mi wifi:** Una vez dentro de la web, apagar las luces eligiendo el modo "Apagado" y luego clickear el boton de reinicio de fábrica  
 **Puse mal los datos de mi wifi, y ahora no anda:** Todavía no tenemos una solucion presisa sobre este problema, pero puede solucionarlo volviendo a instalar el firmware en su hub  
 
-## License
+## Conexiones
+Tubo led 
+![Helios](https://i.imgur.com/tOEysie.png)
+Controlador 
+![Helios](https://i.imgur.com/3uFigCs.png)
+
+## Licencia
 
 Hecho por [TheHackLife](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)  
-Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo o hacer una [donación](https://www.youtube.com/channel/UCOCYnTfY7izcASanFVHL3Aw?view_as=subscriber)  
+Helios es un programa gratuito y no ofrece ninguna garantía, fué creado como resultado de un nuevo desafío y con fines educativos, si detecta algún error en Helios puede abrir un Issue aquí, si le gusta Helios puede colaborar con su desarrollo. 
 MIT License
 
 2020
